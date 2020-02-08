@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Learning Suite" duration-ms="48" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+    <groups>
+      <group name="Smoke">
+        <method signature="learning.Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@7f9a81e8]" name="Demo" class="TestNGDemo.learning"/>
+        <method signature="learning1.Second()[pri:0, instance:TestNGDemo.learning1@9629756]" name="Second" class="TestNGDemo.learning1"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test name="Demo" duration-ms="48" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+      <class name="TestNGDemo.learning1">
+        <test-method status="PASS" signature="Second()[pri:0, instance:TestNGDemo.learning1@9629756]" name="Second" duration-ms="1" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Second -->
+      </class> <!-- TestNGDemo.learning1 -->
+      <class name="TestNGDemo.learning">
+        <test-method status="PASS" signature="Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@7f9a81e8]" name="Demo" duration-ms="10" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ google.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo -->
+      </class> <!-- TestNGDemo.learning -->
+    </test> <!-- Demo -->
+  </suite> <!-- Learning Suite -->
+</testng-results>
