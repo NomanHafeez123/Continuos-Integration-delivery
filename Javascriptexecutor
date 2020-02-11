@@ -1,4 +1,0 @@
-	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("window.document.getElementById('sign-in-button').click()");
-  
-  
