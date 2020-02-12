@@ -1,7 +1,0 @@
-	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("window.document.getElementById('sign-in-button').click()");
-  
-   	ArrayList <String>tabs = new ArrayList<String>(driver.getWindowHandles());
-     	System.out.println(tabs);
-     	System.out.println(tabs.size());
-     	driver.switchTo().window(tabs.get(1)); 

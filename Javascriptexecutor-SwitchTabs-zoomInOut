@@ -1,0 +1,27 @@
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	js.executeScript("window.document.getElementById('sign-in-button').click()");
+  
+   	ArrayList <String>tabs = new ArrayList<String>(driver.getWindowHandles());
+     	System.out.println(tabs);
+     	System.out.println(tabs.size());
+     	driver.switchTo().window(tabs.get(1)); 
+	
+	public class zoomInOut {
+	  
+	  public static void ZoomInZoomOut(AndroidDriver<?> driver) throws InterruptedException{
+
+	  	int scrHeight = driver.manage().window().getSize().getHeight(); //To get the mobile screen height
+	  	int scrWidth = driver.manage().window().getSize().getWidth();//To get the mobile screen width
+	  	MultiTouchAction multiTouch = new MultiTouchAction(driver);
+	  	TouchAction tAction0 = new TouchAction(driver);
+	  	TouchAction tAction1 = new TouchAction(driver);
+	  	System.out.println("scrWidth/2,scrHeight/2 ::::::  " + scrWidth/2 +","+ scrHeight/2);
+	  	tAction0.press(PointOption.point(scrWidth/4, scrHeight/4)).moveTo(PointOption.point(scrWidth/4, 
+	  			60)).release();
+	  	tAction1.press(PointOption.point(scrWidth/4, (scrHeight/4)+40)).moveTo(PointOption.point(scrWidth/4,80 
+	  			)).release();
+	  	multiTouch.add(tAction0).add(tAction1);
+	  	multiTouch.perform();// now perform both the actions simultaneously (tAction0 and tAction1)
+	  	Thread.sleep(10000);
+	  }
+}
