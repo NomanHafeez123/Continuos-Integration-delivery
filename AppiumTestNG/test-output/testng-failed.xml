@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Learning Suite]">
+  <parameter name="URL" value=" google.com"/>
+  <listeners>
+    <listener class-name="TestNGDemo.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Demo1(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNGDemo.learning1">
+        <methods>
+          <include name="Second"/>
+        </methods>
+      </class> <!-- TestNGDemo.learning1 -->
+    </classes>
+  </test> <!-- Demo1(failed) -->
+</suite> <!-- Failed suite [Learning Suite] -->

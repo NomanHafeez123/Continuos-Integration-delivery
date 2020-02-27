@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Learning_Suite">
-              <span class="suite-name border-passed">Learning Suite</span>
+              <span class="suite-name border-failed">Learning Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Learning_Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Learning_Suite" class="hide-methods failed suite-Learning_Suite"> (hide)</a> <!-- hide-methods failed suite-Learning_Suite -->
+                      <a href="#" panel-name="suite-Learning_Suite" class="show-methods failed suite-Learning_Suite"> (show)</a> <!-- show-methods failed suite-Learning_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Learning_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Learning_Suite" title="TestNGDemo.learning1" hash-for-method="Second">Second</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Learning_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,7 +121,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Learning_Suite" title="TestNGDemo.learning1" hash-for-method="Second">Second</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Learning_Suite" title="TestNGDemo.learning1" hash-for-method="third">third</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Learning_Suite -->
@@ -122,6 +136,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Learning_Suite" class="panel Learning_Suite">
+          <div class="suite-Learning_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestNGDemo.learning1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Second">
+                  </a> <!-- Second -->
+                  <span class="method-name">Second</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at TestNGDemo.learning1.Second(learning1.java:15)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Learning_Suite-class-failed -->
           <div class="suite-Learning_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -146,9 +179,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Second">
-                  </a> <!-- Second -->
-                  <span class="method-name">Second</span>
+                  <a name="third">
+                  </a> <!-- third -->
+                  <span class="method-name">third</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,6 +197,9 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Learning Suite&quot;&gt;
   &lt;parameter name=&quot;URL&quot; value=&quot; google.com&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;TestNGDemo.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Demo&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
@@ -172,9 +208,18 @@
     &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestNGDemo.learning&quot;/&gt;
-      &lt;class name=&quot;TestNGDemo.learning1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Demo --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Demo1&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Smoke&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestNGDemo.learning1&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Demo1 --&gt;
 &lt;/suite&gt; &lt;!-- Learning Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,7 +231,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Demo (2 classes)</span>
+                <span class="test-name">Demo (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Demo1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,6 +255,10 @@
                 <span class="method-in-group-name">Second</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">third</span>
+                <br/>
+              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -224,20 +276,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Demo')
 data.setCell(0, 2, 'TestNGDemo.learning')
-data.setCell(0, 3, 10);
+data.setCell(0, 3, 247);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Second')
 data.setCell(1, 2, 'TestNGDemo.learning1')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 5);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'third')
+data.setCell(2, 2, 'TestNGDemo.learning1')
+data.setCell(2, 3, 3);
 window.suiteTableData['Learning_Suite']= { tableData: data, tableDiv: 'times-div-Learning_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 ms</span>
+              <span class="suite-total-time">Total running time: 255 ms</span>
               <div id="times-div-Learning_Suite">
               </div> <!-- times-div-Learning_Suite -->
             </div> <!-- times-div -->
@@ -252,16 +308,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Learning_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">TestNGDemo.learning1</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">third</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Learning_Suite" class="panel">
@@ -279,8 +328,14 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestNGDemo.learning1</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Second</span>
-                <span class="method-start">18 ms</span>
+                <span class="method-start">792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">third</span>
+                <span class="method-start">807 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

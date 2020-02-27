@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Learning Suite">
 <parameter name="URL" value=" google.com"/>
+<listeners>
+<listener class-name="TestNGDemo.TestListener"/>
+</listeners>
  <test name="Demo">
  <groups>
  <run>
@@ -10,9 +13,19 @@
  </groups>
     <classes>
       <class name="TestNGDemo.learning"/>
-      <class name="TestNGDemo.learning1"/>
     </classes>
   </test> 
+  
+ <test name="Demo1">
+  <groups>
+ <run>
+  <include name="Smoke"/>
+ </run>
+ </groups>
+    <classes>
+      <class name="TestNGDemo.learning1"/>
+    </classes>
+  </test>
 
   <!--<test name="Demo1">
     <classes>

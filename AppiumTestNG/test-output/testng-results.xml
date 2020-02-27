@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Learning Suite" duration-ms="48" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+  <suite name="Learning Suite" duration-ms="848" started-at="2020-02-27T11:53:58Z" finished-at="2020-02-27T11:53:59Z">
     <groups>
       <group name="Smoke">
-        <method signature="learning.Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@7f9a81e8]" name="Demo" class="TestNGDemo.learning"/>
-        <method signature="learning1.Second()[pri:0, instance:TestNGDemo.learning1@9629756]" name="Second" class="TestNGDemo.learning1"/>
+        <method signature="learning.Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@58651fd0]" name="Demo" class="TestNGDemo.learning"/>
+        <method signature="learning1.Second()[pri:0, instance:TestNGDemo.learning1@4501b7af]" name="Second" class="TestNGDemo.learning1"/>
+        <method signature="learning1.third()[pri:0, instance:TestNGDemo.learning1@4501b7af]" name="third" class="TestNGDemo.learning1"/>
       </group> <!-- Smoke -->
     </groups>
-    <test name="Demo" duration-ms="48" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
-      <class name="TestNGDemo.learning1">
-        <test-method status="PASS" signature="Second()[pri:0, instance:TestNGDemo.learning1@9629756]" name="Second" duration-ms="1" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Second -->
-      </class> <!-- TestNGDemo.learning1 -->
+    <test name="Demo" duration-ms="305" started-at="2020-02-27T11:53:58Z" finished-at="2020-02-27T11:53:58Z">
       <class name="TestNGDemo.learning">
-        <test-method status="PASS" signature="Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@7f9a81e8]" name="Demo" duration-ms="10" started-at="2020-01-22T10:07:56Z" finished-at="2020-01-22T10:07:56Z">
+        <test-method status="PASS" signature="Demo(java.lang.String)[pri:0, instance:TestNGDemo.learning@58651fd0]" name="Demo" duration-ms="247" started-at="2020-02-27T11:53:58Z" finished-at="2020-02-27T11:53:58Z">
           <params>
             <param index="0">
               <value>
@@ -30,5 +25,56 @@
         </test-method> <!-- Demo -->
       </class> <!-- TestNGDemo.learning -->
     </test> <!-- Demo -->
+    <test name="Demo1" duration-ms="23" started-at="2020-02-27T11:53:59Z" finished-at="2020-02-27T11:53:59Z">
+      <class name="TestNGDemo.learning1">
+        <test-method status="FAIL" signature="Second()[pri:0, instance:TestNGDemo.learning1@4501b7af]" name="Second" duration-ms="5" started-at="2020-02-27T11:53:59Z" finished-at="2020-02-27T11:53:59Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at TestNGDemo.learning1.Second(learning1.java:15)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Second -->
+        <test-method status="PASS" signature="third()[pri:0, instance:TestNGDemo.learning1@4501b7af]" name="third" duration-ms="3" started-at="2020-02-27T11:53:59Z" finished-at="2020-02-27T11:53:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- third -->
+      </class> <!-- TestNGDemo.learning1 -->
+    </test> <!-- Demo1 -->
   </suite> <!-- Learning Suite -->
 </testng-results>

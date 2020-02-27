@@ -1,17 +1,20 @@
 package TestNGDemo;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 
 public class learning1 {
 	
 	@Test(groups={"Smoke"})
 	public void Second()
 	{
-	System.out.println("learning1class");	
+	System.out.println("learning1class");
+	Assert.assertTrue(false);
 	}
-	@Test
+	@Test(groups={"Smoke"})
 	public void third()
 	{
 	System.out.println("learning1classthird");	
