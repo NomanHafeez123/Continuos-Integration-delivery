@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.ListenersTestNG"/>
+  </listeners>
+  <test thread-count="5" name="ValidationTask(failed)">
+    <parameter name="Base_URL" value="https://www.tamanna.com/"/>
+    <parameter name="wait" value="10"/>
+    <parameter name="price" value="KWD 34.950"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="items" value="2 items"/>
+    <parameter name="priceZero" value="KWD 0.000"/>
+    <classes>
+      <class name="ValidateHomeNavigation">
+        <methods>
+          <include name="home" invocation-numbers="0"/>
+          <include name="navigation"/>
+        </methods>
+      </class> <!-- ValidateHomeNavigation -->
+    </classes>
+  </test> <!-- ValidationTask(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="9" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-22T19:34:20 PKT" name="AutomationSuite" finished-at="2022-08-22T19:35:22 PKT" duration-ms="61905">
+    <groups>
+    </groups>
+    <test started-at="2022-08-22T19:34:20 PKT" name="ValidationTask" finished-at="2022-08-22T19:35:22 PKT" duration-ms="61905">
+      <class name="ValidateCart">
+        <test-method is-config="true" signature="navigation(java.lang.String, java.lang.String)[pri:0, instance:ValidateCart@3ffcd140]" started-at="2022-08-22T19:34:20 PKT" name="navigation" finished-at="2022-08-22T19:34:33 PKT" duration-ms="12994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.tamanna.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigation -->
+        <test-method signature="womenCategories(java.lang.String)[pri:1, instance:ValidateCart@3ffcd140]" started-at="2022-08-22T19:34:33 PKT" name="womenCategories" finished-at="2022-08-22T19:34:59 PKT" duration-ms="26574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.tamanna.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- womenCategories -->
+        <test-method signature="menCategories(int, java.lang.String)[pri:2, instance:ValidateCart@3ffcd140]" started-at="2022-08-22T19:34:59 PKT" name="menCategories" finished-at="2022-08-22T19:35:11 PKT" duration-ms="11790" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.tamanna.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menCategories -->
+      </class> <!-- ValidateCart -->
+      <class name="ValidateRemoveCart">
+        <test-method signature="removeCart(java.lang.String, int)[pri:0, instance:ValidateRemoveCart@1176dcec]" started-at="2022-08-22T19:35:16 PKT" name="removeCart" finished-at="2022-08-22T19:35:18 PKT" duration-ms="1905" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[KWD 0.000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeCart -->
+      </class> <!-- ValidateRemoveCart -->
+      <class name="ValidateHomeNavigation">
+        <test-method signature="home(java.lang.String)[pri:1, instance:ValidateHomeNavigation@120d6fe6]" started-at="2022-08-22T19:35:18 PKT" name="home" finished-at="2022-08-22T19:35:22 PKT" duration-ms="3285" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.tamanna.com/]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://www.tamanna.com/] but found [https://www.tamanna.com/men/overview]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://www.tamanna.com/] but found [https://www.tamanna.com/men/overview]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at ValidateHomeNavigation.home(ValidateHomeNavigation.java:21)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- home -->
+      </class> <!-- ValidateHomeNavigation -->
+      <class name="ValidateShoppingBag">
+        <test-method signature="goToShopping(java.lang.String, java.lang.String)[pri:1, instance:ValidateShoppingBag@23bb8443]" started-at="2022-08-22T19:35:11 PKT" name="goToShopping" finished-at="2022-08-22T19:35:16 PKT" duration-ms="5318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2 items]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[KWD 34.950]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToShopping -->
+      </class> <!-- ValidateShoppingBag -->
+    </test> <!-- ValidationTask -->
+  </suite> <!-- AutomationSuite -->
+</testng-results>
