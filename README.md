@@ -3,7 +3,7 @@
 
 ### Built With
 
-Following approach/libraries/tools are used to build this framework for Tamanna
+Following approach/libraries/tools are used to build this framework
 * [MAVEN]
 * [TESTNG]
 * [WAITS IMPLEMENTATION]
